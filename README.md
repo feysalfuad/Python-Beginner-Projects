@@ -83,5 +83,20 @@ Each project increases in difficulty and improves my understanding of real progr
 
 ---
 
+### 🔐 Password Generator
+
+A command-line application that generates secure random passwords.
+
+Features:
+- Custom password length
+- Uppercase and lowercase letters
+- Numbers and symbols
+- Generate multiple passwords in one session
+
+Concepts used:
+- Random module
+- Loops
+- Strings
+- User input handling
 ## 👨‍💻 Author
 Built by an aspiring software developer improving through hands-on projects.
