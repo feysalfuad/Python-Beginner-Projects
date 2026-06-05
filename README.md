@@ -100,3 +100,23 @@ Concepts used:
 - User input handling
 ## 👨‍💻 Author
 Built by an aspiring software developer improving through hands-on projects.
+
+---
+
+### 🎲 Rock Paper Scissors
+
+An interactive command-line game where the player competes against the computer.
+
+Features:
+- Random computer choices
+- Win, lose, and tie detection
+- Score tracking
+- Play again functionality
+- Input validation
+
+Concepts used:
+- Random module
+- Lists
+- Loops
+- Conditional statements
+- Variables and score tracking
