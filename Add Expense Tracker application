@@ -1,0 +1,109 @@
+print("💰 Expense Tracker")
+
+expenses = []
+
+while True:
+    
+    print("\nWhat would you like to do?")
+    print("1. Add Expense")
+    print("2. View Expenses")
+    print("3. Delete Expense")
+    print("4. Exit")
+    
+    choice = input("Choose 1-4: ").strip()
+    
+    if choice == "1":
+        name = input("Enter expense name: ")
+        
+        category = input("Enter category: ")
+        
+        while True:
+    
+            try:
+        
+                amount = float(input("Enter amount: £"))
+        
+                if amount < 0:
+                    print("❌ Amount cannot be negative.")
+                    continue
+        
+                break
+    
+            except:
+                print("❌ Please enter a valid number.")
+        
+        expenses.append({
+            "name": name,
+            "category": category,
+            "amount": amount
+            
+        })
+        print("✅ Expense added!")
+        
+    elif choice == "2":
+        
+        print("\n📋 Expenses:")
+        
+        if len(expenses) == 0:
+            print("No expenses recorded.")
+            
+        else:
+            for i in range(len(expenses)):
+                print(
+                    f"{i + 1}. {expenses[i]['name']} ({expenses[i]['category']}) - £{expenses[i]['amount']:.2f}"
+                )
+            
+            total = 0
+            
+            for expense in expenses:
+                total += expense["amount"]
+                
+            print(f"\n💰 Total Spent: £{total:.2f}")
+            
+            print("\n📊 Spending by Category:")
+            
+            categories = {}
+            
+            for expense in expenses:
+                
+                category = expense["category"]
+                
+                if category not in categories:
+                    categories[category] = 0
+                    
+                categories[category] += expense["amount"]
+                
+            for category, amount in categories.items():
+                print(f"{category}: £{amount:.2f}")
+        
+    elif choice == "3":
+        
+        if not expenses:
+            print("❌ No expenses to delete.")
+            
+        else:
+            print("\n📋 Select an expense to delete:")
+            
+            for i in range(len(expenses)):
+                print(
+                    f"{i + 1}. {expenses[i]['name']} - £{expenses[i]['amount']:.2f}"
+                )
+                
+            try:
+                expense_number = int(input("Enter expense number: "))
+                
+                if 1 <= expense_number <= len(expenses):
+                    removed = expenses.pop(expense_number - 1)
+                    print(f"🗑 Expense deleted: {removed['name']}")
+                else:
+                    print("❌ Invalid expense number.")
+                    
+            except:
+                print("❌ Please enter a valid number. ")
+        
+    elif choice == "4":
+        print("👋 Goodbye!")
+        break
+    
+    else:
+        print("❌ Invalid choice.")
