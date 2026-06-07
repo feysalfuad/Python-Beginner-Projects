@@ -120,3 +120,19 @@ Concepts used:
 - Loops
 - Conditional statements
 - Variables and score tracking
+
+---
+
+💰 Expense Tracker
+
+A command-line expense management application that allows users to:
+
+Add expenses
+Categorize expenses
+View expense history
+Delete expenses
+Calculate total spending
+Display spending by category
+Validate user input
+
+This project uses Python lists, dictionaries, loops, conditional statements, and exception handling to manage financial data.
