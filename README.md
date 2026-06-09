@@ -136,3 +136,71 @@ Display spending by category
 Validate user input
 
 This project uses Python lists, dictionaries, loops, conditional statements, and exception handling to manage financial data.
+
+8. 📒 Contact Book
+
+A contact management application that allows users to store and manage contact information efficiently.
+
+Features:
+
+Add contacts
+View contacts
+Search contacts
+Delete contacts
+Automatic JSON file storage
+Persistent data between sessions
+
+Skills Demonstrated:
+
+Lists and dictionaries
+Searching and filtering data
+File handling
+JSON storage
+Data persistence
+Exception handling
+🧠 What I Learned
+
+Through these projects I have developed experience with:
+
+Python fundamentals
+Variables and data types
+Conditional statements
+Loops
+Functions
+Lists and dictionaries
+Error handling and exception management
+File handling
+JSON data storage
+Data persistence
+User input validation
+Building menu-driven applications
+Problem-solving and debugging
+Writing clean and readable code
+Using Git and GitHub for version control
+🚀 Future Projects
+
+I am continuing to expand this portfolio by building more advanced applications, including:
+
+🏦 Banking App
+📚 Library Management System
+🛒 Shopping Cart System
+🎯 Hangman Game
+🏨 Hotel Booking System
+🌦 Weather App
+🔑 Password Manager
+📊 Personal Finance Dashboard
+🎯 Learning Goals
+
+My goal is to continue progressing from beginner-level Python projects to more advanced software development projects involving:
+
+APIs
+Databases
+Web Development
+Automation
+Artificial Intelligence
+Full-Stack Applications
+👨‍💻 Author
+
+Created by Feysal Hassan as part of my journey into Software Development, Computer Science, and Artificial Intelligence.
+
+I am continuously learning, building projects, and improving my programming skills through practical application and real-world problem solving.
