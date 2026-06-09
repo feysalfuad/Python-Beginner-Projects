@@ -179,9 +179,80 @@ Writing clean and readable code
 Using Git and GitHub for version control
 🚀 Future Projects
 
+# 🏦 Banking App (Python)
+
+A command-line banking system built with Python that simulates basic financial operations. This project includes deposits, withdrawals, balance tracking, transaction history, and persistent data storage using JSON.
+
+---
+
+## 📌 Features
+
+- 💰 Deposit money into account
+- 💸 Withdraw money with balance validation
+- 📊 View current account balance
+- 📋 View full transaction history
+- 💾 Automatic data saving using JSON
+- 🔄 Automatic data loading on startup
+- 🚫 Prevents overdrawing account balance
+- 🔙 Option to go back during transactions
+
+---
+
+## 🧠 What I Learned
+
+This project helped me strengthen my understanding of:
+
+- Python loops and conditionals
+- Functions and code organisation
+- Working with lists and dictionaries
+- File handling (read/write operations)
+- JSON data storage and retrieval
+- Error handling (FileNotFoundError)
+- Building menu-driven applications
+- Simulating real-world systems
+
+---
+
+## 🛠️ Technologies Used
+
+- Python 3
+- JSON (for data persistence)
+
+---
+
+## 📂 How It Works
+
+1. The program loads existing account data from `bank_data.json` (if available)
+2. The user interacts with a menu system:
+   - Deposit money
+   - Withdraw money
+   - View balance
+   - View transaction history
+3. Every transaction updates:
+   - Account balance
+   - Transaction history
+4. Data is automatically saved after each update
+
+---
+
+## 💡 Future Improvements
+
+- Add multiple bank accounts
+- Implement PIN/password authentication
+- Add interest calculations
+- Support transfer between accounts
+- Create monthly statements
+- Upgrade to database storage (SQLite)
+
+---
+
+## 🚀 How to Run
+
+```bash
+python banking_app.py
+
 I am continuing to expand this portfolio by building more advanced applications, including:
 
-🏦 Banking App
 📚 Library Management System
 🛒 Shopping Cart System
 🎯 Hangman Game
