@@ -153,3 +153,55 @@ Focused on Python, AI, and real-world project building.
 ⭐ Repository Goal
 
 This repository is not just practice — it is a structured software development learning portfolio showing continuous improvement and real project experience.
+
+# 🌤 Weather App (Python API Project)
+
+## 📌 Overview
+
+This is a command-line Weather Application built with Python that uses real-world APIs to fetch live weather data based on user input.
+
+The project demonstrates how modern applications interact with external services, process JSON data, and present information in a clean and user-friendly format.
+
+It is part of a structured learning journey aimed at developing real software engineering skills such as API integration, modular programming, debugging, and system design.
+
+---
+
+## 🚀 Features
+
+- 🌍 Search live weather by city name
+- 📡 Real-time weather data using Open-Meteo API
+- 🧠 Automatic geocoding (city → coordinates)
+- 🌤 Human-readable weather conditions (Clear, Rain, Snow, etc.)
+- 🌡 Temperature and wind speed display
+- ⭐ Favourite cities (session-based storage)
+- 🔁 Re-run last searched city
+- 🧩 Clean modular function-based structure
+- ⚠️ Error handling for invalid cities
+
+---
+
+## 🧠 Key Learning Outcomes
+
+This project demonstrates:
+
+- Working with REST APIs
+- Handling JSON data
+- Modular programming (functions)
+- Input validation and error handling
+- Real-world data processing
+- CLI application design
+- Debugging and fixing production-style errors
+
+---
+
+## 🛠️ Technologies Used
+
+- Python 3
+- Requests Library
+- Open-Meteo Geocoding API
+- Open-Meteo Weather API
+
+---
+
+## 📂 Project Structure
+
