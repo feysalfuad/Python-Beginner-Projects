@@ -1,0 +1,115 @@
+import requests
+
+favourites = []
+last_search = None
+
+print("🌤 Weather App ")
+
+# ---------------- FUNCTIONS ----------------
+def get_coordinates(city):
+    geo_url = f"https://geocoding-api.open-meteo.com/v1/search?name={city}&count=1"
+    data = requests.get(geo_url).json()
+
+    if "results" not in data:
+        return None
+
+    return data["results"][0]["latitude"], data["results"][0]["longitude"]
+
+
+def get_weather(lat, lon):
+    url = (
+        f"https://api.open-meteo.com/v1/forecast"
+        f"?latitude={lat}&longitude={lon}&current_weather=true"
+    )
+    return requests.get(url).json()["current_weather"]
+
+
+def describe_weather(code):
+    if code == 0:
+        return "☀️ Clear sky"
+    elif code in [1, 2, 3]:
+        return "🌤 Partly cloudy"
+    elif code in [45, 48]:
+        return "🌫 Foggy"
+    elif code in [51, 53, 55]:
+        return "🌦 Drizzle"
+    elif code in [61, 63, 65]:
+        return "🌧 Rain"
+    elif code in [71, 73, 75]:
+        return "❄️ Snow"
+    elif code in [95, 96, 99]:
+        return "⛈ Thunderstorm"
+    else:
+        return "🌍 Unknown"
+
+
+def search_city(city):
+    global last_search
+
+    coords = get_coordinates(city)
+
+    if not coords:
+        print("❌ City not found")
+        return
+
+    lat, lon = coords
+    weather = get_weather(lat, lon)
+    condition = describe_weather(weather["weathercode"])
+
+    print("\n📍 WEATHER REPORT")
+    print("---------------------")
+    print(f"🏙 City: {city.title()}")
+    print(f"🌡 Temperature: {weather['temperature']}°C")
+    print(f"💨 Wind Speed: {weather['windspeed']} km/h")
+    print(f"🌥 Condition: {condition}")
+    print("---------------------")
+
+    last_search = city
+
+
+# ---------------- MAIN MENU ----------------
+while True:
+
+    print("\n🌤 WEATHER APP MENU")
+    print("1. Search City")
+    print("2. Add Favourite City")
+    print("3. View Favourites")
+    print("4. Re-run Last Search")
+    print("5. Exit")
+
+    choice = input("Choose option (1-5): ").strip()
+
+    # SEARCH CITY
+    if choice == "1":
+        city = input("Enter city name: ").strip()
+        search_city(city)
+
+    # ADD FAVOURITE
+    elif choice == "2":
+        city = input("Enter city to add: ").strip()
+        favourites.append(city)
+        print("⭐ Added to favourites!")
+
+    # VIEW FAVOURITES
+    elif choice == "3":
+        if not favourites:
+            print("No favourites yet.")
+        else:
+            print("\n⭐ Favourite Cities:")
+            for i, city in enumerate(favourites, 1):
+                print(f"{i}. {city}")
+
+    # LAST SEARCH
+    elif choice == "4":
+        if last_search:
+            search_city(last_search)
+        else:
+            print("❌ No previous search found.")
+
+    # EXIT
+    elif choice == "5":
+        print("👋 Goodbye!")
+        break
+
+    else:
+        print("❌ Invalid option")
